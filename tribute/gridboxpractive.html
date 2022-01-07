@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <meta keyword="grid box practice area">
+<style>
+    *{              /*reset that works on everything*/
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+
+    }
+    body{
+        font-family:Arial, Helvetica, sans-serif;
+        -webkit-font-smoothing:antiliased;
+        background:#ffffff;
+        color:#000000;
+    }
+    .wrapper{
+        display:grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        column-gap: 1em;
+        row-gap: 1em;
+        gap:1em;        /*same as above if column and row are the same*/
+
+        grid-auto-rows: minmax(00px, auto);
+        /*grid-auto-rows: 300px; row height*/
+        grid-row-start: auto;
+        align-items: start;/*cross*/
+        justify-items: end;/*main*/
+    }
+    .wrapper div{
+        color:blue;
+        background:#eee;
+        padding:1em;
+
+    }
+    .wrapper div:nth-child(odd){
+        color:red;
+        background: linear-gradient(35deg, cyan, magenta);
+    }
+    .box2{
+        /*  [.wrapper div] was more specific so this does not work*/
+        background: linear-gradient(35deg, cyan, magenta);
+    }
+    #boxid{ /*using an id can override because it is single use*/
+        background: linear-gradient(35deg, cyan, magenta);
+    }
+    .box3{
+        display:grid;
+        grid-template-columns: repeat(3, 1fr);
+        color:green;
+        gap:1em;
+    }
+    .box5{
+        align-self: stretch;    /*default*/
+        grid-column:2/4;
+        justify-self:stretch;
+        box-shadow:5px 5px 5px 0 rgba(20, 20, 216, 0.8) 
+        /*offset-x, offset-y, blur radius, spread radius color*/
+
+        
+    }
+    .box4{
+        grid-column:1/3;    /*width of the box*/
+        grid-row:2/4;        /*height of the box, can only down downwards*/
+        z-index: 1;         /*controls who is on top*/
+        }
+    .box5{
+        grid-column:2/3;    /*overlap requires column and grid identifiers*/
+        grid-row:2/4        /*newest box on sheet is on top*/
+
+    }
+
+
+</style>
+<style>
+    .wrapper2{
+        display:grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        column-gap: 1em;
+        row-gap: 1em;
+        gap:1em;        /*same as above*/
+
+        grid-auto-rows: minmax(200px, auto);
+        }
+    .wrapper2 div{
+        color:blue;
+        background:#eee;
+        padding:1em;
+        }
+    .box12{
+        grid-column:2/3;
+        grid-row:1/3
+    }
+    .box14{
+        grid-column:1/3;
+        grid-row:2/3;        
+        background: linear-gradient(35deg, cyan, magenta);
+    }
+</style>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="box1">
+            <h3>Boxy1</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, ullam!</p>
+        </div>
+        <div class="box2" id="boxid">
+            <h3>Boxy2</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium est asperiores voluptatibus molestiae esse itaque porro, obcaecati, explicabo dignissimos laborum vitae? Veniam distinctio, quia officiis soluta optio perferendis magni incidunt.</p>
+        </div>
+        <div class="box3">
+            <h3>Boxy3</h3>
+            <p>hope</p>
+            <div>hope</div>
+            <div>hope</div>
+            <div>hope</div>
+            <div>hope</div>
+            <div>hope</div>
+            <div>hope</div>
+            <div>hope</div>
+
+            </div>
+        <div class="box4">
+            <h3>Boxy4</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, ullam!</p>
+        </div>
+        <div class="box5">
+            <h3>Boxy5</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, ullam!</p>
+        </div>
+        <div class="box6">
+            <h3>Boxy6</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, ullam!</p>
+        </div>
+        <div class="box7">
+            <h3>Boxy7</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, ullam!</p>
+        </div>
+        <div class="box8">
+            <h3>Boxy8</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, ullam!</p>
+        </div>
+        <div class="box9">
+            <h3>Boxy9</h3>
+            <p>Lorem </p>
+        </div>
+
+        
+
+    </div>
+    <div class="wrapper2">
+        <div class="box11">box11</div>
+        <div class="box12">box12 <br>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam, facere blanditiis alias asperiores maiores libero, officiis eligendi qui repellat optio praesentium rem temporibus et. Ipsum ea nulla numquam officiis minima.
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci, hic voluptatibus. Nam consequuntur, quo corrupti quis quod maiores, delectus doloribus beatae consectetur temporibus molestiae aliquid labore in nostrum tenetur adipisci.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi debitis impedit sunt odio dolorum. Eligendi explicabo corrupti, laboriosam dolores nihil blanditiis excepturi fuga architecto aperiam ipsa modi culpa ducimus eius.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti esse harum ratione praesentium incidunt? Aut soluta aspernatur quo minima, quae voluptates dicta hic vitae dolores expedita explicabo molestias sed vel.</div>
+        <div class="box13">box13</div>
+        <div class="box14">box14 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere inventore similique animi necessitatibus provident! Commodi autem, cumque at voluptatem exercitationem error? Eos cum consectetur quasi maxime debitis natus nostrum ipsa?</div>
+        <div class="box15">box15</div>
+        <div class="box16">box16</div>
+
+    </div>
+
+
+
+
+</body>
+
+</html>

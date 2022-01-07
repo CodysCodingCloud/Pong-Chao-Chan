@@ -1,0 +1,181 @@
+/* this will affect everything and below is a reset
+*{
+    margin:0;
+    padding:0;
+}
+*/
+a{
+    text-decoration:purple;
+    color:blue;
+}
+a:hover{
+    color:blue;
+    text-decoration: none;
+}
+a:active{
+    color:yellow;
+}
+a:visited{
+    color:black;
+}
+.button{
+    color:green;
+    background:grey;
+    padding:10px;
+}
+.button:hover{
+    color:yellow;
+    background: blue;
+}
+.clearfix{
+    clear:both;
+}
+h1{
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+h3{
+    color:green;
+    background-color:aqua, rgb(40,23,200);
+    font-family:'Times New Roman', Times, serif;
+    font-size: 40px;
+}
+head{
+    background-color: green;
+}
+body{
+    background-color:#f4aaf4;
+    color: rgb(250,10,9);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:20px;
+    font-weight:normal;
+    font: normal 20px Arial, Helvetica, sans-serif;
+
+    line-height:2em;
+}
+.container2{
+    background-color: green;
+    width:80%;
+    margin:auto;
+    border-bottom: 20px red dotted;
+    border-style: red solid;
+
+}
+.box3{
+    background-color: #533;
+    /*top right botton left*/
+    margin: 5px 40px 40px 10px;
+    margin: 40px 20px;
+    border-top: 20px green solid;
+    border: 10px blue solid;
+    border-bottom-style: blue dotted;
+    padding-top:20px;
+    padding: 20px;
+}
+.box3 p{
+    font-weight: 200;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.box4{
+    margin:20px;
+    padding:20px;
+    border: 10px blue solid;
+    background-color:rgb(23,200,20)
+}
+.cat1 ul{
+    color: blue;
+    list-style: square;/*or none*/
+    border: 5px blue solid;
+    margin:5px;
+}
+.cat1 li{
+    color:black;
+    border: 10px red solid;
+    padding-bottom: 10px;
+    margin: 10px;
+    list-style-image: url('../images/check.jpg');
+}
+.form1 .form-group{
+    /*the more specific one takes more priority*/
+    padding-bottom:10px;
+
+}
+.form-group{
+    padding-bottom:100px;
+}
+
+.form1 label{
+    display:block;
+}
+.form1 input[type="text"], .form1 textarea{
+    padding:10px;
+    width:80%;
+}
+.form1 input[type="submit"]{
+    background-color:#333;
+    color:white;
+    padding:20px 10px;
+    border: none;
+}
+.form1 input[type="submit"]:hover{
+    color:yellow;
+    background: blue;}
+.block1{
+    border:5px red solid;
+}
+.block2{
+    float:left;
+    width:50%;
+    border: 5px solid #ccc;
+    padding: 10px;
+    box-sizing:border-box;
+}
+#main{
+    float:right;
+    width:70%;
+    padding: 10px;
+    box-sizing:border-box;
+}
+#side{
+    float:left;
+    width:30%;
+    border:1px green dotted;
+    padding: 10px;
+    box-sizing:border-box;
+}
+.boxr{
+
+    background-color:red;
+    color:black;
+    margin-top:100px;
+    width:800px;
+    height:200px;
+    top:200px;
+}
+.boxb{
+    background-color:blue;
+    background-image:url("../images/genshin_sayu.png");
+    background-position:center;
+    background-position:100px 200px;
+    width:800px;
+    height:200px;
+    margin-top:00px;   
+}
+.boxb h3{
+    color:pink;
+    position:relative;
+    top:40px;
+
+}
+.fixme{
+    position:fixed;
+    top:400px;
+} 
+.list2 li:first-child{
+    background:blue;
+}.list2 li:nth-child(3){
+    background:blue;
+}.list2 li:last-child{
+    background:blue;
+}.list2 li:nth-child(even){
+    background:purple;
+}

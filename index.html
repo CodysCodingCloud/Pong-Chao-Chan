@@ -6,7 +6,7 @@
     <style>
         #main{
             background: hsl(0,0%,60%);
-            width:90%;
+            width:95%;
             margin:auto;
             font-family:Arial, Helvetica, sans-serif;
         }
@@ -14,19 +14,25 @@
             color:blue;
             text-align:center;
         }
+        #showcase{
+            display:grid;
+            grid-template-columns: 1fr 1fr;
+            margin:0;
+        }
         #img-div{
             padding-top:1em;
             text-align:center;
             background:hsl(0,0%,80%);
-            
             border-radius: 5px;
         }
         #img-div img{
-            width:70%;
+            width:90%;
         }
         #img-caption{
             color: black;
             padding-bottom:1em;
+            width:90%;
+            margin:auto;
         }
         #tribute-info{
             width: 50%;
@@ -64,12 +70,16 @@
                 width:100%;
             }
             #img-div img{
-                width:95%;
+                width:90%;
             }
             #tribute-info{
                 width:90%;
                 margin:auto
             }
+            #showcase{
+                display:block;
+            }
+
         }
 
 
@@ -78,52 +88,54 @@
 
 <body id="main">
     <header>
-        <h1 id="title">Pong Chau Chan</h2>   
-        <figure id="img-div"><img src="images/pgp family photo.png" alt="tribute photo">
+        <h1 id="title">Pong Chau Chan</h2>  
+    <div id="showcase">
+        <figure id="img-div"><a href="images/pgp family photo.png"><img src="images/pgp family photo.png" alt="tribute photo"></a>
             <figcaption id="img-caption">
                 Pong Chao as a child seated at the bottom right between his grandmother and father
             </figcaption>
             </figure>
-        <figure id="img-div"><img src="images/pgp teen.jpg" alt="tribute photo">
+        <figure id="img-div"><a href="images/pgp teen.jpg"><img src="images/pgp teen.jpg" alt="tribute photo"></a>
             <figcaption id="img-caption">
                 Pong Chao as a teen
             </figcaption>
             </figure>
-        <figure id="img-div"><img src="images/pgp young adult.jpg" alt="tribute photo">
+        <figure id="img-div"><a href="images/pgp young adult.jpg"><img src="images/pgp young adult.jpg" alt="tribute photo"></a>
             <figcaption id="img-caption">
                 Pong Chao as a young adult
             </figcaption>
             </figure>
-        <figure id="img-div"><img src="images/husband and wife.jpg" alt="tribute photo">
+        <figure id="img-div"><a href="images/husband and wife.jpg"><img src="images/husband and wife.jpg" alt="tribute photo"></a>
             <figcaption id="img-caption">
                 Pong Chao and his wife
             </figcaption>
             </figure>
-        <figure id="img-div"><img src="images/first sons.jpg" alt="tribute photo">
+        <figure id="img-div"><a href="images/first sons.jpg"><img src="images/first sons.jpg" alt="tribute photo"></a>
             <figcaption id="img-caption">
                 Pong Chao with his wife, parents, and his eldest twin sons
             </figcaption>
             </figure>
-        <figure id="img-div"><img src="images/pgp wife and twins.jpg" alt="tribute photo">
+        <figure id="img-div"><a href="images/pgp wife and twins.jpg"><img src="images/pgp wife and twins.jpg" alt="tribute photo"></a>
             <figcaption id="img-caption">
                 Pong Chao with his wife and his twins
             </figcaption>
             </figure>
-        <figure id="img-div"><img src="images/tributeimg.jpg" alt="tribute photo">
+        <figure id="img-div"><a href="images/tributeimg.jpg"><img src="images/tributeimg.jpg" alt="tribute photo"></a>
             <figcaption id="img-caption">
                 Pong Chau Chan on the bottom left with his wife on the bottom right holding their first grandchild, and at the top from right to left; the daughter in law, and her mother and father.
             </figcaption>
             </figure>
-        <figure id="img-div"><img src="images/full family.jpg" alt="tribute photo">
+        <figure id="img-div"><a href="images/full family.jpg"><img src="images/full family.jpg" alt="tribute photo"></a>
             <figcaption id="img-caption">
                 Pong Chau Chan at the center cutting the cake with his 3 sons, daughter in laws and 6 grandchildren
             </figcaption>
             </figure>
-        <figure id="img-div"><img src="images/pgp with grand children.jpg" alt="tribute photo">
+        <figure id="img-div"><a href="images/pgp with grand children.jpg"><img src="images/pgp with grand children.jpg" alt="tribute photo"></a>
             <figcaption id="img-caption">
                 Pong Chao with grandson Mason and adopted grand daughter Irene Jung
             </figcaption>
             </figure>    
+    </div>
     </header>
     <main>
 
